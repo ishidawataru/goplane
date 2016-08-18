@@ -1,0 +1,464 @@
+time="2016-08-18T16:56:47Z" level=info msg="gobgpd started" 
+time="2016-08-18T16:56:47Z" level=info msg="Finished reading the config file" Topic=Config 
+time="2016-08-18T16:56:47Z" level=info msg="Peer 192.168.10.4 is added" 
+time="2016-08-18T16:56:47Z" level=debug msg="failed to set md5 192.168.10.4 no such file or directory" Topic=Peer 
+time="2016-08-18T16:56:47Z" level=info msg="Add a peer configuration for:192.168.10.4" Topic=Peer 
+time="2016-08-18T16:56:47Z" level=info msg="listen tcp: lookup localhost on [::1]:53: read udp [::1]:48094->[::1]:53: read: connection refused" 
+time="2016-08-18T16:56:47Z" level=info msg="Peer 192.168.10.3 is added" 
+time="2016-08-18T16:56:47Z" level=debug msg="failed to set md5 192.168.10.3 no such file or directory" Topic=Peer 
+time="2016-08-18T16:56:47Z" level=info msg="Add a peer configuration for:192.168.10.3" Topic=Peer 
+time="2016-08-18T16:56:47Z" level=debug msg="IdleHoldTimer expired" Duration=0 Key=192.168.10.4 Topic=Peer 
+time="2016-08-18T16:56:47Z" level=debug msg="state changed" Key=192.168.10.4 Topic=Peer new="BGP_FSM_ACTIVE" old="BGP_FSM_IDLE" reason=idle-hold-timer-expired 
+time="2016-08-18T16:56:47Z" level=debug msg="IdleHoldTimer expired" Duration=0 Key=192.168.10.3 Topic=Peer 
+time="2016-08-18T16:56:47Z" level=debug msg="state changed" Key=192.168.10.3 Topic=Peer new="BGP_FSM_ACTIVE" old="BGP_FSM_IDLE" reason=idle-hold-timer-expired 
+time="2016-08-18T16:56:49Z" level=debug msg="create Destination" Key="192.168.0.1/32" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="Processing destination" Key="192.168.0.1/32" Topic=table 
+time="2016-08-18T16:56:49Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="add vrf" ExportRt=[65000:10] ImportRt=[65000:10] Key="65000:10" Rd=65000:10 Topic=Vrf 
+time="2016-08-18T16:56:49Z" level=debug msg="create Destination" Key="65000:65000:10" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="Processing destination" Key="65000:65000:10" Topic=table 
+time="2016-08-18T16:56:49Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="create Destination" Key="[type:multicast][rd:65000:10][etag:10][ip:192.168.0.1]" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="Processing destination" Key="[type:multicast][rd:65000:10][etag:10][ip:192.168.0.1]" Topic=table 
+time="2016-08-18T16:56:49Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="add vrf" ExportRt=[65000:20] ImportRt=[65000:20] Key="65000:20" Rd=65000:20 Topic=Vrf 
+time="2016-08-18T16:56:49Z" level=debug msg="create Destination" Key="65000:65000:20" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="Processing destination" Key="65000:65000:20" Topic=table 
+time="2016-08-18T16:56:49Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="create Destination" Key="[type:multicast][rd:65000:20][etag:20][ip:192.168.0.1]" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="Processing destination" Key="[type:multicast][rd:65000:20][etag:20][ip:192.168.0.1]" Topic=table 
+time="2016-08-18T16:56:49Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="create Destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:0a:e8:7a:b4:03:95][ip:<nil>][labels:[20]]" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:0a:e8:7a:b4:03:95][ip:<nil>][labels:[20]]" Topic=table 
+time="2016-08-18T16:56:49Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="create Destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[20]]" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[20]]" Topic=table 
+time="2016-08-18T16:56:49Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="create Destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:32:58:23:4d:f1:1f][ip:<nil>][labels:[20]]" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:32:58:23:4d:f1:1f][ip:<nil>][labels:[20]]" Topic=table 
+time="2016-08-18T16:56:49Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="create Destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[10]]" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[10]]" Topic=table 
+time="2016-08-18T16:56:49Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="create Destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:fe:d3:c0:db:eb:50][ip:<nil>][labels:[10]]" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:fe:d3:c0:db:eb:50][ip:<nil>][labels:[10]]" Topic=table 
+time="2016-08-18T16:56:49Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="create Destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:1a:ac:6e:e3:bd:95][ip:<nil>][labels:[10]]" Topic=Table 
+time="2016-08-18T16:56:49Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:1a:ac:6e:e3:bd:95][ip:<nil>][labels:[10]]" Topic=table 
+time="2016-08-18T16:56:49Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:56:57Z" level=debug msg="state changed" Key=192.168.10.3 Topic=Peer new="BGP_FSM_OPENSENT" old="BGP_FSM_ACTIVE" reason=new-connection 
+time="2016-08-18T16:56:57Z" level=debug msg="state changed" Key=192.168.10.3 Topic=Peer new="BGP_FSM_OPENCONFIRM" old="BGP_FSM_OPENSENT" reason=open-msg-received 
+time="2016-08-18T16:56:57Z" level=info msg="Peer Up" Key=192.168.10.3 State="BGP_FSM_OPENCONFIRM" Topic=Peer 
+time="2016-08-18T16:56:57Z" level=debug msg="state changed" Key=192.168.10.3 Topic=Peer new="BGP_FSM_ESTABLISHED" old="BGP_FSM_OPENCONFIRM" reason=open-msg-negotiated 
+time="2016-08-18T16:56:57Z" level=debug msg="sent update" Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.2, NLRIs: [[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[20]]]}} {Extcomms: [VXLAN], [65000:20]}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:56:57Z" level=debug msg="sent update" Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.2, NLRIs: [[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:32:58:23:4d:f1:1f][ip:<nil>][labels:[20]]]}} {Extcomms: [VXLAN], [65000:20]}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:56:57Z" level=debug msg="sent update" Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.2, NLRIs: [[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[10]]]}} {Extcomms: [VXLAN], [65000:10]}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:56:57Z" level=debug msg="sent update" Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.2, NLRIs: [[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:fe:d3:c0:db:eb:50][ip:<nil>][labels:[10]]]}} {Extcomms: [VXLAN], [65000:10]}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:56:57Z" level=debug msg="sent update" Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.2, NLRIs: [[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:1a:ac:6e:e3:bd:95][ip:<nil>][labels:[10]]]}} {Extcomms: [VXLAN], [65000:10]}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:56:57Z" level=debug msg="sent update" Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.2, NLRIs: [[type:multicast][rd:65000:10][etag:10][ip:192.168.0.1]]}} {Extcomms: [65000:10]} {Pmsi: type: ingress-repl, label: 0, tunnel-id: 192.168.0.1}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:56:57Z" level=debug msg="sent update" Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.2, NLRIs: [[type:multicast][rd:65000:20][etag:20][ip:192.168.0.1]]}} {Extcomms: [65000:20]} {Pmsi: type: ingress-repl, label: 0, tunnel-id: 192.168.0.1}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:56:57Z" level=debug msg="sent update" Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.2, NLRIs: [[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:0a:e8:7a:b4:03:95][ip:<nil>][labels:[20]]]}} {Extcomms: [VXLAN], [65000:20]}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:56:57Z" level=debug msg="sent update" Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {Nexthop: 192.168.10.2} {LocalPref: 100}] nlri=[192.168.0.1/32] withdrawals=[] 
+time="2016-08-18T16:56:57Z" level=debug msg="received update" Key=192.168.10.3 Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.3, NLRIs: [[type:multicast][rd:65000:20][etag:20][ip:192.168.0.2]]}} {Extcomms: [65000:20]} {Pmsi: type: ingress-repl, label: 0, tunnel-id: 192.168.0.2}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:56:57Z" level=debug msg="create Destination" Key="[type:multicast][rd:65000:20][etag:20][ip:192.168.0.2]" Topic=Table 
+time="2016-08-18T16:56:57Z" level=debug msg="Processing destination" Key="[type:multicast][rd:65000:20][etag:20][ip:192.168.0.2]" Topic=table 
+time="2016-08-18T16:56:57Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:56:57Z" level=debug msg="From same AS, ignore." Data={ [type:multicast][rd:65000:20][etag:20][ip:192.168.0.2] | src: { 192.168.10.3 | as: 65000, id: 192.168.0.2 }, nh: 192.168.10.3 } Key=192.168.10.3 Topic=Peer 
+time="2016-08-18T16:56:57Z" level=debug msg="received update" Key=192.168.10.3 Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.3, NLRIs: [[type:multicast][rd:65000:10][etag:10][ip:192.168.0.2]]}} {Extcomms: [65000:10]} {Pmsi: type: ingress-repl, label: 0, tunnel-id: 192.168.0.2}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:56:57Z" level=debug msg="create Destination" Key="[type:multicast][rd:65000:10][etag:10][ip:192.168.0.2]" Topic=Table 
+time="2016-08-18T16:56:57Z" level=debug msg="Processing destination" Key="[type:multicast][rd:65000:10][etag:10][ip:192.168.0.2]" Topic=table 
+time="2016-08-18T16:56:57Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:56:57Z" level=debug msg="From same AS, ignore." Data={ [type:multicast][rd:65000:10][etag:10][ip:192.168.0.2] | src: { 192.168.10.3 | as: 65000, id: 192.168.0.2 }, nh: 192.168.10.3 } Key=192.168.10.3 Topic=Peer 
+time="2016-08-18T16:56:57Z" level=debug msg="received update" Key=192.168.10.3 Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.3, NLRIs: [[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[10]]]}} {Extcomms: [VXLAN], [65000:10]}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:56:57Z" level=debug msg="create Destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[10]]" Topic=Table 
+time="2016-08-18T16:56:57Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[10]]" Topic=table 
+time="2016-08-18T16:56:57Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:56:57Z" level=debug msg="From same AS, ignore." Data={ [type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[10]] | src: { 192.168.10.3 | as: 65000, id: 192.168.0.2 }, nh: 192.168.10.3 } Key=192.168.10.3 Topic=Peer 
+time="2016-08-18T16:56:57Z" level=debug msg="received update" Key=192.168.10.3 Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.3, NLRIs: [[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[20]]]}} {Extcomms: [VXLAN], [65000:20]}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:56:57Z" level=debug msg="create Destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[20]]" Topic=Table 
+time="2016-08-18T16:56:57Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[20]]" Topic=table 
+time="2016-08-18T16:56:57Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:56:57Z" level=debug msg="From same AS, ignore." Data={ [type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[20]] | src: { 192.168.10.3 | as: 65000, id: 192.168.0.2 }, nh: 192.168.10.3 } Key=192.168.10.3 Topic=Peer 
+time="2016-08-18T16:56:57Z" level=debug msg="received update" Key=192.168.10.3 Topic=Peer attributes=[{Origin: i}  {Nexthop: 192.168.10.3} {LocalPref: 100}] nlri=[192.168.0.2/32] withdrawals=[] 
+time="2016-08-18T16:56:57Z" level=debug msg="create Destination" Key="192.168.0.2/32" Topic=Table 
+time="2016-08-18T16:56:57Z" level=debug msg="Processing destination" Key="192.168.0.2/32" Topic=table 
+time="2016-08-18T16:56:57Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:56:57Z" level=debug msg="From same AS, ignore." Data={ 192.168.0.2/32 | src: { 192.168.10.3 | as: 65000, id: 192.168.0.2 }, nh: 192.168.10.3 } Key=192.168.10.3 Topic=Peer 
+time="2016-08-18T16:57:00Z" level=debug msg="state changed" Key=192.168.10.4 Topic=Peer new="BGP_FSM_OPENSENT" old="BGP_FSM_ACTIVE" reason=new-connection 
+time="2016-08-18T16:57:00Z" level=debug msg="state changed" Key=192.168.10.4 Topic=Peer new="BGP_FSM_OPENCONFIRM" old="BGP_FSM_OPENSENT" reason=open-msg-received 
+time="2016-08-18T16:57:00Z" level=info msg="Peer Up" Key=192.168.10.4 State="BGP_FSM_OPENCONFIRM" Topic=Peer 
+time="2016-08-18T16:57:00Z" level=debug msg="state changed" Key=192.168.10.4 Topic=Peer new="BGP_FSM_ESTABLISHED" old="BGP_FSM_OPENCONFIRM" reason=open-msg-negotiated 
+time="2016-08-18T16:57:00Z" level=debug msg="From same AS, ignore." Data={ 192.168.0.2/32 | src: { 192.168.10.3 | as: 65000, id: 192.168.0.2 }, nh: 192.168.10.3 } Key=192.168.10.4 Topic=Peer 
+time="2016-08-18T16:57:00Z" level=debug msg="From same AS, ignore." Data={ [type:multicast][rd:65000:20][etag:20][ip:192.168.0.2] | src: { 192.168.10.3 | as: 65000, id: 192.168.0.2 }, nh: 192.168.10.3 } Key=192.168.10.4 Topic=Peer 
+time="2016-08-18T16:57:00Z" level=debug msg="From same AS, ignore." Data={ [type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[10]] | src: { 192.168.10.3 | as: 65000, id: 192.168.0.2 }, nh: 192.168.10.3 } Key=192.168.10.4 Topic=Peer 
+time="2016-08-18T16:57:00Z" level=debug msg="From same AS, ignore." Data={ [type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[20]] | src: { 192.168.10.3 | as: 65000, id: 192.168.0.2 }, nh: 192.168.10.3 } Key=192.168.10.4 Topic=Peer 
+time="2016-08-18T16:57:00Z" level=debug msg="From same AS, ignore." Data={ [type:multicast][rd:65000:10][etag:10][ip:192.168.0.2] | src: { 192.168.10.3 | as: 65000, id: 192.168.0.2 }, nh: 192.168.10.3 } Key=192.168.10.4 Topic=Peer 
+time="2016-08-18T16:57:00Z" level=debug msg="received update" Key=192.168.10.4 Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.4, NLRIs: [[type:multicast][rd:65000:10][etag:10][ip:192.168.0.3]]}} {Extcomms: [65000:10]} {Pmsi: type: ingress-repl, label: 0, tunnel-id: 192.168.0.3}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:57:00Z" level=debug msg="create Destination" Key="[type:multicast][rd:65000:10][etag:10][ip:192.168.0.3]" Topic=Table 
+time="2016-08-18T16:57:00Z" level=debug msg="Processing destination" Key="[type:multicast][rd:65000:10][etag:10][ip:192.168.0.3]" Topic=table 
+time="2016-08-18T16:57:00Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:57:00Z" level=debug msg="From same AS, ignore." Data={ [type:multicast][rd:65000:10][etag:10][ip:192.168.0.3] | src: { 192.168.10.4 | as: 65000, id: 192.168.0.3 }, nh: 192.168.10.4 } Key=192.168.10.4 Topic=Peer 
+time="2016-08-18T16:57:00Z" level=debug msg="From same AS, ignore." Data={ [type:multicast][rd:65000:10][etag:10][ip:192.168.0.3] | src: { 192.168.10.4 | as: 65000, id: 192.168.0.3 }, nh: 192.168.10.4 } Key=192.168.10.3 Topic=Peer 
+time="2016-08-18T16:57:00Z" level=debug msg="received update" Key=192.168.10.4 Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.4, NLRIs: [[type:multicast][rd:65000:20][etag:20][ip:192.168.0.3]]}} {Extcomms: [65000:20]} {Pmsi: type: ingress-repl, label: 0, tunnel-id: 192.168.0.3}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:57:00Z" level=debug msg="create Destination" Key="[type:multicast][rd:65000:20][etag:20][ip:192.168.0.3]" Topic=Table 
+time="2016-08-18T16:57:00Z" level=debug msg="Processing destination" Key="[type:multicast][rd:65000:20][etag:20][ip:192.168.0.3]" Topic=table 
+time="2016-08-18T16:57:00Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:57:00Z" level=debug msg="sent update" Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.2, NLRIs: [[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:1a:ac:6e:e3:bd:95][ip:<nil>][labels:[10]]]}} {Extcomms: [VXLAN], [65000:10]}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:57:00Z" level=debug msg="sent update" Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.2, NLRIs: [[type:multicast][rd:65000:20][etag:20][ip:192.168.0.1]]}} {Extcomms: [65000:20]} {Pmsi: type: ingress-repl, label: 0, tunnel-id: 192.168.0.1}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:57:00Z" level=debug msg="sent update" Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.2, NLRIs: [[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:0a:e8:7a:b4:03:95][ip:<nil>][labels:[20]]]}} {Extcomms: [VXLAN], [65000:20]}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:57:00Z" level=debug msg="sent update" Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.2, NLRIs: [[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:32:58:23:4d:f1:1f][ip:<nil>][labels:[20]]]}} {Extcomms: [VXLAN], [65000:20]}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:57:00Z" level=debug msg="sent update" Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.2, NLRIs: [[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:fe:d3:c0:db:eb:50][ip:<nil>][labels:[10]]]}} {Extcomms: [VXLAN], [65000:10]}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:57:00Z" level=debug msg="sent update" Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.2, NLRIs: [[type:multicast][rd:65000:10][etag:10][ip:192.168.0.1]]}} {Extcomms: [65000:10]} {Pmsi: type: ingress-repl, label: 0, tunnel-id: 192.168.0.1}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:57:00Z" level=debug msg="sent update" Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.2, NLRIs: [[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[20]]]}} {Extcomms: [VXLAN], [65000:20]}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:57:00Z" level=debug msg="sent update" Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.2, NLRIs: [[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[10]]]}} {Extcomms: [VXLAN], [65000:10]}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:57:00Z" level=debug msg="sent update" Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {Nexthop: 192.168.10.2} {LocalPref: 100}] nlri=[192.168.0.1/32] withdrawals=[] 
+time="2016-08-18T16:57:00Z" level=debug msg="From same AS, ignore." Data={ [type:multicast][rd:65000:20][etag:20][ip:192.168.0.3] | src: { 192.168.10.4 | as: 65000, id: 192.168.0.3 }, nh: 192.168.10.4 } Key=192.168.10.4 Topic=Peer 
+time="2016-08-18T16:57:00Z" level=debug msg="From same AS, ignore." Data={ [type:multicast][rd:65000:20][etag:20][ip:192.168.0.3] | src: { 192.168.10.4 | as: 65000, id: 192.168.0.3 }, nh: 192.168.10.4 } Key=192.168.10.3 Topic=Peer 
+time="2016-08-18T16:57:00Z" level=debug msg="received update" Key=192.168.10.4 Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.4, NLRIs: [[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[10]]]}} {Extcomms: [VXLAN], [65000:10]}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:57:00Z" level=debug msg="create Destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[10]]" Topic=Table 
+time="2016-08-18T16:57:00Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[10]]" Topic=table 
+time="2016-08-18T16:57:00Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:57:00Z" level=debug msg="From same AS, ignore." Data={ [type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[10]] | src: { 192.168.10.4 | as: 65000, id: 192.168.0.3 }, nh: 192.168.10.4 } Key=192.168.10.4 Topic=Peer 
+time="2016-08-18T16:57:00Z" level=debug msg="From same AS, ignore." Data={ [type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[10]] | src: { 192.168.10.4 | as: 65000, id: 192.168.0.3 }, nh: 192.168.10.4 } Key=192.168.10.3 Topic=Peer 
+time="2016-08-18T16:57:00Z" level=debug msg="received update" Key=192.168.10.4 Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpReach(l2vpn-evpn): {Nexthop: 192.168.10.4, NLRIs: [[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[20]]]}} {Extcomms: [VXLAN], [65000:20]}] nlri=[] withdrawals=[] 
+time="2016-08-18T16:57:00Z" level=debug msg="create Destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[20]]" Topic=Table 
+time="2016-08-18T16:57:00Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[20]]" Topic=table 
+time="2016-08-18T16:57:00Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:57:00Z" level=debug msg="From same AS, ignore." Data={ [type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[20]] | src: { 192.168.10.4 | as: 65000, id: 192.168.0.3 }, nh: 192.168.10.4 } Key=192.168.10.4 Topic=Peer 
+time="2016-08-18T16:57:00Z" level=debug msg="From same AS, ignore." Data={ [type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[20]] | src: { 192.168.10.4 | as: 65000, id: 192.168.0.3 }, nh: 192.168.10.4 } Key=192.168.10.3 Topic=Peer 
+time="2016-08-18T16:57:00Z" level=debug msg="received update" Key=192.168.10.4 Topic=Peer attributes=[{Origin: i}  {Nexthop: 192.168.10.4} {LocalPref: 100}] nlri=[192.168.0.3/32] withdrawals=[] 
+time="2016-08-18T16:57:00Z" level=debug msg="create Destination" Key="192.168.0.3/32" Topic=Table 
+time="2016-08-18T16:57:00Z" level=debug msg="Processing destination" Key="192.168.0.3/32" Topic=table 
+time="2016-08-18T16:57:00Z" level=debug msg="computeKnownBestPath known pathlist: 1" Topic=Table 
+time="2016-08-18T16:57:00Z" level=debug msg="From same AS, ignore." Data={ 192.168.0.3/32 | src: { 192.168.10.4 | as: 65000, id: 192.168.0.3 }, nh: 192.168.10.4 } Key=192.168.10.4 Topic=Peer 
+time="2016-08-18T16:57:00Z" level=debug msg="From same AS, ignore." Data={ 192.168.0.3/32 | src: { 192.168.10.4 | as: 65000, id: 192.168.0.3 }, nh: 192.168.10.4 } Key=192.168.10.3 Topic=Peer 
+time="2016-08-18T16:57:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T16:57:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T16:57:56Z" level=debug msg="create Destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:33:33:00:00:00:16][ip:<nil>][labels:[20]]" Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:33:33:00:00:00:16][ip:<nil>][labels:[20]]" Topic=table 
+time="2016-08-18T16:57:56Z" level=debug msg="Removing withdrawals" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:33:33:00:00:00:16][ip:<nil>][labels:[20]]" Length=1 Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="Found withdrawals for path(s) that did not get installed" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:33:33:00:00:00:16][ip:<nil>][labels:[20]]" Length=1 Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="create Destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:33:33:00:00:00:16][ip:<nil>][labels:[10]]" Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:33:33:00:00:00:16][ip:<nil>][labels:[10]]" Topic=table 
+time="2016-08-18T16:57:56Z" level=debug msg="Removing withdrawals" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:33:33:00:00:00:16][ip:<nil>][labels:[10]]" Length=1 Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="Found withdrawals for path(s) that did not get installed" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:33:33:00:00:00:16][ip:<nil>][labels:[10]]" Length=1 Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="create Destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:33:33:00:00:00:02][ip:<nil>][labels:[20]]" Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:33:33:00:00:00:02][ip:<nil>][labels:[20]]" Topic=table 
+time="2016-08-18T16:57:56Z" level=debug msg="Removing withdrawals" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:33:33:00:00:00:02][ip:<nil>][labels:[20]]" Length=1 Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="Found withdrawals for path(s) that did not get installed" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:33:33:00:00:00:02][ip:<nil>][labels:[20]]" Length=1 Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="create Destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:33:33:ff:1c:f2:f3][ip:<nil>][labels:[10]]" Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:33:33:ff:1c:f2:f3][ip:<nil>][labels:[10]]" Topic=table 
+time="2016-08-18T16:57:56Z" level=debug msg="Removing withdrawals" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:33:33:ff:1c:f2:f3][ip:<nil>][labels:[10]]" Length=1 Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="Found withdrawals for path(s) that did not get installed" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:33:33:ff:1c:f2:f3][ip:<nil>][labels:[10]]" Length=1 Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="create Destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:33:33:ff:4b:f0:23][ip:<nil>][labels:[20]]" Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:33:33:ff:4b:f0:23][ip:<nil>][labels:[20]]" Topic=table 
+time="2016-08-18T16:57:56Z" level=debug msg="Removing withdrawals" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:33:33:ff:4b:f0:23][ip:<nil>][labels:[20]]" Length=1 Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="Found withdrawals for path(s) that did not get installed" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:33:33:ff:4b:f0:23][ip:<nil>][labels:[20]]" Length=1 Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="create Destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:33:33:00:00:00:02][ip:<nil>][labels:[10]]" Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:33:33:00:00:00:02][ip:<nil>][labels:[10]]" Topic=table 
+time="2016-08-18T16:57:56Z" level=debug msg="Removing withdrawals" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:33:33:00:00:00:02][ip:<nil>][labels:[10]]" Length=1 Topic=Table 
+time="2016-08-18T16:57:56Z" level=debug msg="Found withdrawals for path(s) that did not get installed" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:33:33:00:00:00:02][ip:<nil>][labels:[10]]" Length=1 Topic=Table 
+time="2016-08-18T16:57:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T16:58:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T16:58:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T16:58:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T16:58:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T16:59:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T16:59:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T16:59:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T16:59:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:00:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:00:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:00:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:00:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:01:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:01:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:01:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:01:49Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:32:58:23:4d:f1:1f][ip:<nil>][labels:[20]]" Topic=table 
+time="2016-08-18T17:01:49Z" level=debug msg="Removing withdrawals" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:32:58:23:4d:f1:1f][ip:<nil>][labels:[20]]" Length=1 Topic=Table 
+time="2016-08-18T17:01:49Z" level=debug msg="sent update" Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpUnreach(l2vpn-evpn): {NLRIs: [[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:32:58:23:4d:f1:1f][ip:<nil>][labels:[20]]]}} {Extcomms: [VXLAN], [65000:20]}] nlri=[] withdrawals=[] 
+time="2016-08-18T17:01:49Z" level=debug msg="sent update" Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpUnreach(l2vpn-evpn): {NLRIs: [[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:32:58:23:4d:f1:1f][ip:<nil>][labels:[20]]]}} {Extcomms: [VXLAN], [65000:20]}] nlri=[] withdrawals=[] 
+time="2016-08-18T17:01:49Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:fe:d3:c0:db:eb:50][ip:<nil>][labels:[10]]" Topic=table 
+time="2016-08-18T17:01:49Z" level=debug msg="Removing withdrawals" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:fe:d3:c0:db:eb:50][ip:<nil>][labels:[10]]" Length=1 Topic=Table 
+time="2016-08-18T17:01:49Z" level=debug msg="sent update" Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpUnreach(l2vpn-evpn): {NLRIs: [[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:fe:d3:c0:db:eb:50][ip:<nil>][labels:[10]]]}} {Extcomms: [VXLAN], [65000:10]}] nlri=[] withdrawals=[] 
+time="2016-08-18T17:01:49Z" level=debug msg="sent update" Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpUnreach(l2vpn-evpn): {NLRIs: [[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:fe:d3:c0:db:eb:50][ip:<nil>][labels:[10]]]}} {Extcomms: [VXLAN], [65000:10]}] nlri=[] withdrawals=[] 
+time="2016-08-18T17:01:49Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:1a:ac:6e:e3:bd:95][ip:<nil>][labels:[10]]" Topic=table 
+time="2016-08-18T17:01:49Z" level=debug msg="Removing withdrawals" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:1a:ac:6e:e3:bd:95][ip:<nil>][labels:[10]]" Length=1 Topic=Table 
+time="2016-08-18T17:01:49Z" level=debug msg="sent update" Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpUnreach(l2vpn-evpn): {NLRIs: [[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:1a:ac:6e:e3:bd:95][ip:<nil>][labels:[10]]]}} {Extcomms: [VXLAN], [65000:10]}] nlri=[] withdrawals=[] 
+time="2016-08-18T17:01:49Z" level=debug msg="sent update" Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpUnreach(l2vpn-evpn): {NLRIs: [[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:1a:ac:6e:e3:bd:95][ip:<nil>][labels:[10]]]}} {Extcomms: [VXLAN], [65000:10]}] nlri=[] withdrawals=[] 
+time="2016-08-18T17:01:50Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:0a:e8:7a:b4:03:95][ip:<nil>][labels:[20]]" Topic=table 
+time="2016-08-18T17:01:50Z" level=debug msg="Removing withdrawals" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:0a:e8:7a:b4:03:95][ip:<nil>][labels:[20]]" Length=1 Topic=Table 
+time="2016-08-18T17:01:50Z" level=debug msg="sent update" Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpUnreach(l2vpn-evpn): {NLRIs: [[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:0a:e8:7a:b4:03:95][ip:<nil>][labels:[20]]]}} {Extcomms: [VXLAN], [65000:20]}] nlri=[] withdrawals=[] 
+time="2016-08-18T17:01:50Z" level=debug msg="sent update" Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpUnreach(l2vpn-evpn): {NLRIs: [[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:0a:e8:7a:b4:03:95][ip:<nil>][labels:[20]]]}} {Extcomms: [VXLAN], [65000:20]}] nlri=[] withdrawals=[] 
+time="2016-08-18T17:01:57Z" level=debug msg="received update" Key=192.168.10.3 Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpUnreach(l2vpn-evpn): {NLRIs: [[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[10]]]}} {Extcomms: [VXLAN], [65000:10]}] nlri=[] withdrawals=[] 
+time="2016-08-18T17:01:57Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[10]]" Topic=table 
+time="2016-08-18T17:01:57Z" level=debug msg="Removing withdrawals" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[10]]" Length=1 Topic=Table 
+time="2016-08-18T17:01:57Z" level=debug msg="From same AS, ignore." Data={ [type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[10]] | src: { 192.168.10.3 | as: 65000, id: 192.168.0.2 }, nh: 192.168.10.3, withdraw } Key=192.168.10.4 Topic=Peer 
+time="2016-08-18T17:01:57Z" level=debug msg="From same AS, ignore." Data={ [type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[10]] | src: { 192.168.10.3 | as: 65000, id: 192.168.0.2 }, nh: 192.168.10.3, withdraw } Key=192.168.10.3 Topic=Peer 
+time="2016-08-18T17:01:57Z" level=debug msg="received update" Key=192.168.10.3 Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpUnreach(l2vpn-evpn): {NLRIs: [[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[20]]]}} {Extcomms: [VXLAN], [65000:20]}] nlri=[] withdrawals=[] 
+time="2016-08-18T17:01:57Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[20]]" Topic=table 
+time="2016-08-18T17:01:57Z" level=debug msg="Removing withdrawals" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[20]]" Length=1 Topic=Table 
+time="2016-08-18T17:01:57Z" level=debug msg="From same AS, ignore." Data={ [type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[20]] | src: { 192.168.10.3 | as: 65000, id: 192.168.0.2 }, nh: 192.168.10.3, withdraw } Key=192.168.10.4 Topic=Peer 
+time="2016-08-18T17:01:57Z" level=debug msg="From same AS, ignore." Data={ [type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[20]] | src: { 192.168.10.3 | as: 65000, id: 192.168.0.2 }, nh: 192.168.10.3, withdraw } Key=192.168.10.3 Topic=Peer 
+time="2016-08-18T17:01:57Z" level=debug msg="received update" Key=192.168.10.4 Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpUnreach(l2vpn-evpn): {NLRIs: [[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[20]]]}} {Extcomms: [VXLAN], [65000:20]}] nlri=[] withdrawals=[] 
+time="2016-08-18T17:01:57Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[20]]" Topic=table 
+time="2016-08-18T17:01:57Z" level=debug msg="Removing withdrawals" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[20]]" Length=1 Topic=Table 
+time="2016-08-18T17:01:57Z" level=debug msg="From same AS, ignore." Data={ [type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[20]] | src: { 192.168.10.4 | as: 65000, id: 192.168.0.3 }, nh: 192.168.10.4, withdraw } Key=192.168.10.3 Topic=Peer 
+time="2016-08-18T17:01:57Z" level=debug msg="From same AS, ignore." Data={ [type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[20]] | src: { 192.168.10.4 | as: 65000, id: 192.168.0.3 }, nh: 192.168.10.4, withdraw } Key=192.168.10.4 Topic=Peer 
+time="2016-08-18T17:01:57Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[20]]" Topic=table 
+time="2016-08-18T17:01:57Z" level=debug msg="Removing withdrawals" Key="[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[20]]" Length=1 Topic=Table 
+time="2016-08-18T17:01:57Z" level=debug msg="sent update" Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpUnreach(l2vpn-evpn): {NLRIs: [[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[20]]]}} {Extcomms: [VXLAN], [65000:20]}] nlri=[] withdrawals=[] 
+time="2016-08-18T17:01:57Z" level=debug msg="sent update" Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpUnreach(l2vpn-evpn): {NLRIs: [[type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[20]]]}} {Extcomms: [VXLAN], [65000:20]}] nlri=[] withdrawals=[] 
+time="2016-08-18T17:01:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:02:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:02:06Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[10]]" Topic=table 
+time="2016-08-18T17:02:06Z" level=debug msg="Removing withdrawals" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[10]]" Length=1 Topic=Table 
+time="2016-08-18T17:02:06Z" level=debug msg="received update" Key=192.168.10.4 Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpUnreach(l2vpn-evpn): {NLRIs: [[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[10]]]}} {Extcomms: [VXLAN], [65000:10]}] nlri=[] withdrawals=[] 
+time="2016-08-18T17:02:06Z" level=debug msg="Processing destination" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[10]]" Topic=table 
+time="2016-08-18T17:02:06Z" level=debug msg="Removing withdrawals" Key="[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[10]]" Length=1 Topic=Table 
+time="2016-08-18T17:02:06Z" level=debug msg="sent update" Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpUnreach(l2vpn-evpn): {NLRIs: [[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[10]]]}} {Extcomms: [VXLAN], [65000:10]}] nlri=[] withdrawals=[] 
+time="2016-08-18T17:02:06Z" level=debug msg="sent update" Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer attributes=[{Origin: i}  {LocalPref: 100} {MpUnreach(l2vpn-evpn): {NLRIs: [[type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[10]]]}} {Extcomms: [VXLAN], [65000:10]}] nlri=[] withdrawals=[] 
+time="2016-08-18T17:02:06Z" level=debug msg="From same AS, ignore." Data={ [type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[10]] | src: { 192.168.10.4 | as: 65000, id: 192.168.0.3 }, nh: 192.168.10.4, withdraw } Key=192.168.10.4 Topic=Peer 
+time="2016-08-18T17:02:06Z" level=debug msg="From same AS, ignore." Data={ [type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:03][ip:<nil>][labels:[10]] | src: { 192.168.10.4 | as: 65000, id: 192.168.0.3 }, nh: 192.168.10.4, withdraw } Key=192.168.10.3 Topic=Peer 
+time="2016-08-18T17:02:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:02:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:02:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:03:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:03:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:03:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:03:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:04:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:04:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:04:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:04:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:05:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:05:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:05:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:05:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:06:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:06:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:06:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:06:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:07:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:07:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:07:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:07:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:08:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:08:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:08:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:08:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:09:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:09:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:09:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:09:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:10:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:10:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:10:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:10:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:11:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:11:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:11:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:11:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:12:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:12:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:12:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:12:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:13:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:13:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:13:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:13:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:14:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:14:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:14:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:14:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:15:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:15:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:15:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:15:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:16:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:16:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:16:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:16:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:17:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:17:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:17:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:17:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:18:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:18:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:18:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:18:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:19:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:19:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:19:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:19:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:20:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:20:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:20:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:20:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:21:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:21:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:21:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:21:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:22:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:22:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:22:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:22:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:23:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:23:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:23:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:23:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:24:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:24:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:24:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:24:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:25:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:25:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:25:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:25:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:26:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:26:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:26:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:26:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:27:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:27:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:27:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:27:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:28:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:28:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:28:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:28:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:29:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:29:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:29:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:29:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:30:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:30:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:30:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:30:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:31:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:31:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:31:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:31:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:32:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:32:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:32:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:32:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:33:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:33:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:33:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:33:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:34:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:34:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:34:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:34:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:35:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:35:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:35:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:35:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:36:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:36:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:36:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:36:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:37:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:37:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:37:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:37:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:38:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:38:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:38:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:38:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:39:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:39:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:39:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:39:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:40:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:40:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:40:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:40:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:41:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:41:28Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:41:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:41:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:42:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:42:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:42:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:42:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:43:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:43:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:43:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:43:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:44:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:44:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:44:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:44:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:45:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:45:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:45:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:45:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:46:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:46:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:46:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:46:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:47:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:47:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:47:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:47:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:48:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:48:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:48:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:48:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:49:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:49:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:49:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:49:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:50:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:50:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:50:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:50:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:51:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:51:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:51:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:51:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:52:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:52:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:52:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:52:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:53:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:53:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:53:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:53:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:54:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:54:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:54:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:54:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:55:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:55:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:55:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:55:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:56:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:56:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:56:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:56:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:57:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:57:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:57:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:57:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:58:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:58:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:58:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:58:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:59:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:59:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:59:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T17:59:58Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T18:00:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T18:00:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T18:00:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T18:00:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T18:01:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T18:01:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T18:01:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T18:01:57Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T18:02:00Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T18:02:27Z" level=debug msg=sent Key=192.168.10.3 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 
+time="2016-08-18T18:02:30Z" level=debug msg=sent Key=192.168.10.4 State="BGP_FSM_ESTABLISHED" Topic=Peer data=&{{[] 19 4} 0x1505d20} 

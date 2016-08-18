@@ -1,0 +1,49 @@
+time="2016-08-18T15:49:50Z" level=debug msg="new dataplane: netlink" 
+time="2016-08-18T15:49:50Z" level=info msg="VirtualNetwork 65000:10 is added" 
+time="2016-08-18T15:49:50Z" level=debug msg="add route to lo" 
+time="2016-08-18T15:49:50Z" level=info msg="VirtualNetwork 65000:20 is added" 
+time="2016-08-18T15:49:50Z" level=debug msg="vtep intf: vtep10" 
+time="2016-08-18T15:49:50Z" level=debug msg="add br10" 
+time="2016-08-18T15:49:50Z" level=debug msg="add vtep10" 
+time="2016-08-18T15:49:50Z" level=debug msg="vtep intf: vtep20" 
+time="2016-08-18T15:49:50Z" level=debug msg="add br20" 
+time="2016-08-18T15:49:50Z" level=debug msg="add vtep20" 
+time="2016-08-18T15:49:50Z" level=debug msg="monitoring: eth2, index: 1956" Etag=10 Topic=VirtualNetwork 
+time="2016-08-18T15:49:50Z" level=debug msg="monitoring: eth3, index: 1971" Etag=20 Topic=VirtualNetwork 
+time="2016-08-18T15:49:52Z" level=debug msg="mac: aa:aa:aa:aa:aa:03, ip: <nil>, index: 1956, family: NDA_VNI, state: NUD_REACHABLE, type: RTM_TYPE(0), flags: NTF_TYPE(0)" Etag=10 Topic=VirtualNetwork 
+time="2016-08-18T15:49:52Z" level=debug msg="mac: aa:aa:aa:aa:aa:03, ip: <nil>, index: 1971, family: NDA_VNI, state: NUD_REACHABLE, type: RTM_TYPE(0), flags: NTF_TYPE(0)" Etag=20 Topic=VirtualNetwork 
+time="2016-08-18T15:49:58Z" level=debug msg="modFdb new path, prefix: [type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[10]], nexthop: 192.168.10.3, withdraw: false" Etag=10 Topic=VirtualNetwork 
+time="2016-08-18T15:49:58Z" level=debug msg="mod cannection map: nh 192.168.10.3, vtep addr [type:multicast][rd:65000:20][etag:20][ip:192.168.0.2] etag 20 withdraw false" 
+time="2016-08-18T15:49:58Z" level=debug msg="connect to 192.168.10.3" 
+time="2016-08-18T15:49:58Z" level=debug msg="connMap: map[192.168.10.3:%!s(*net.UDPConn=&{{0xc820251340}})]" Etag=20 Topic=virtualnetwork 
+time="2016-08-18T15:49:58Z" level=debug msg="modFdb new path, prefix: [type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[20]], nexthop: 192.168.10.3, withdraw: false" Etag=20 Topic=VirtualNetwork 
+time="2016-08-18T15:49:58Z" level=debug msg="mod cannection map: nh 192.168.10.3, vtep addr [type:multicast][rd:65000:10][etag:10][ip:192.168.0.2] etag 10 withdraw false" 
+time="2016-08-18T15:49:58Z" level=debug msg="connect to 192.168.10.3" 
+time="2016-08-18T15:49:58Z" level=debug msg="connMap: map[192.168.10.3:%!s(*net.UDPConn=&{{0xc8202ab570}})]" Etag=10 Topic=virtualnetwork 
+time="2016-08-18T15:49:59Z" level=debug msg="modFdb new path, prefix: [type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:1e:c4:7e:53:99:e8][ip:<nil>][labels:[10]], nexthop: 192.168.10.2, withdraw: false" Etag=10 Topic=VirtualNetwork 
+time="2016-08-18T15:49:59Z" level=debug msg="mod cannection map: nh 192.168.10.2, vtep addr [type:multicast][rd:65000:10][etag:10][ip:192.168.0.1] etag 10 withdraw false" 
+time="2016-08-18T15:49:59Z" level=debug msg="connect to 192.168.10.2" 
+time="2016-08-18T15:49:59Z" level=debug msg="connMap: map[192.168.10.3:%!s(*net.UDPConn=&{{0xc8202ab570}}) 192.168.10.2:%!s(*net.UDPConn=&{{0xc8202abc70}})]" Etag=10 Topic=virtualnetwork 
+time="2016-08-18T15:49:59Z" level=debug msg="modFdb new path, prefix: [type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[10]], nexthop: 192.168.10.2, withdraw: false" Etag=10 Topic=VirtualNetwork 
+time="2016-08-18T15:49:59Z" level=debug msg="mod cannection map: nh 192.168.10.2, vtep addr [type:multicast][rd:65000:20][etag:20][ip:192.168.0.1] etag 20 withdraw false" 
+time="2016-08-18T15:49:59Z" level=debug msg="connect to 192.168.10.2" 
+time="2016-08-18T15:49:59Z" level=debug msg="connMap: map[192.168.10.3:%!s(*net.UDPConn=&{{0xc820251340}}) 192.168.10.2:%!s(*net.UDPConn=&{{0xc820356310}})]" Etag=20 Topic=virtualnetwork 
+time="2016-08-18T15:49:59Z" level=debug msg="modFdb new path, prefix: [type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:62:b9:bc:eb:f1:f0][ip:<nil>][labels:[20]], nexthop: 192.168.10.2, withdraw: false" Etag=20 Topic=VirtualNetwork 
+time="2016-08-18T15:49:59Z" level=debug msg="modFdb new path, prefix: [type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[20]], nexthop: 192.168.10.2, withdraw: false" Etag=20 Topic=VirtualNetwork 
+time="2016-08-18T15:50:46Z" level=debug msg="mac: 33:33:00:00:00:16, ip: ff02::16, index: 1956, family: NDA_TYPE(10), state: NUD_NOARP, type: RTM_TYPE(5), flags: NTF_TYPE(0)" Etag=10 Topic=VirtualNetwork 
+time="2016-08-18T15:54:50Z" level=debug msg="modFdb new path, prefix: [type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:62:b9:bc:eb:f1:f0][ip:<nil>][labels:[20]], nexthop: 192.168.10.2, withdraw: true" Etag=20 Topic=VirtualNetwork 
+time="2016-08-18T15:54:50Z" level=debug msg="modFdb new path, prefix: [type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:1e:c4:7e:53:99:e8][ip:<nil>][labels:[10]], nexthop: 192.168.10.2, withdraw: true" Etag=10 Topic=VirtualNetwork 
+time="2016-08-18T15:54:56Z" level=debug msg="modFdb new path, prefix: [type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[10]], nexthop: 192.168.10.2, withdraw: true" Etag=10 Topic=VirtualNetwork 
+time="2016-08-18T15:54:56Z" level=debug msg="modFdb new path, prefix: [type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:01][ip:<nil>][labels:[20]], nexthop: 192.168.10.2, withdraw: true" Etag=20 Topic=VirtualNetwork 
+time="2016-08-18T15:54:57Z" level=debug msg="mac: aa:aa:aa:aa:aa:03, ip: <nil>, index: 1956, family: NDA_VNI, state: NUD_STALE, type: RTM_TYPE(0), flags: NTF_TYPE(0)" Etag=10 Topic=VirtualNetwork 
+time="2016-08-18T15:54:57Z" level=debug msg="mac: aa:aa:aa:aa:aa:03, ip: <nil>, index: 1971, family: NDA_VNI, state: NUD_STALE, type: RTM_TYPE(0), flags: NTF_TYPE(0)" Etag=20 Topic=VirtualNetwork 
+time="2016-08-18T15:54:57Z" level=debug msg="modFdb new path, prefix: [type:macadv][rd:65000:10][esi:single-homed][etag:10][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[10]], nexthop: 192.168.10.3, withdraw: true" Etag=10 Topic=VirtualNetwork 
+time="2016-08-18T15:54:57Z" level=debug msg="modFdb new path, prefix: [type:macadv][rd:65000:20][esi:single-homed][etag:20][mac:aa:aa:aa:aa:aa:02][ip:<nil>][labels:[20]], nexthop: 192.168.10.3, withdraw: true" Etag=20 Topic=VirtualNetwork 
+time="2016-08-18T16:12:14Z" level=debug msg="mod cannection map: nh 192.168.10.2, vtep addr [type:multicast][rd:65000:20][etag:20][ip:192.168.0.1] etag 20 withdraw true" 
+time="2016-08-18T16:12:14Z" level=debug msg="connMap: map[192.168.10.3:%!s(*net.UDPConn=&{{0xc820251340}})]" Etag=20 Topic=virtualnetwork 
+time="2016-08-18T16:12:14Z" level=debug msg="mod cannection map: nh 192.168.10.2, vtep addr [type:multicast][rd:65000:10][etag:10][ip:192.168.0.1] etag 10 withdraw true" 
+time="2016-08-18T16:12:14Z" level=debug msg="connMap: map[192.168.10.3:%!s(*net.UDPConn=&{{0xc8202ab570}})]" Etag=10 Topic=virtualnetwork 
+time="2016-08-18T16:12:17Z" level=debug msg="mod cannection map: nh 192.168.10.3, vtep addr [type:multicast][rd:65000:10][etag:10][ip:192.168.0.2] etag 10 withdraw true" 
+time="2016-08-18T16:12:17Z" level=debug msg="connMap: map[]" Etag=10 Topic=virtualnetwork 
+time="2016-08-18T16:12:17Z" level=debug msg="mod cannection map: nh 192.168.10.3, vtep addr [type:multicast][rd:65000:20][etag:20][ip:192.168.0.2] etag 20 withdraw true" 
+time="2016-08-18T16:12:17Z" level=debug msg="connMap: map[]" Etag=20 Topic=virtualnetwork 
