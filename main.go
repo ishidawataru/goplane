@@ -18,23 +18,23 @@ package main
 import (
 	"io/ioutil"
 	"log/syslog"
+	"net"
 	"os"
 	"os/signal"
 	"runtime"
 	"strings"
 	"syscall"
+	"time"
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/Sirupsen/logrus/hooks/syslog"
 	"github.com/jessevdk/go-flags"
 	"github.com/osrg/goplane/config"
-	"github.com/osrg/goplane/iptables"
-	"github.com/osrg/goplane/netlink"
+	p "github.com/osrg/goplane/protocol"
+	"github.com/osrg/goplane/protocol/iptables"
+	"github.com/osrg/goplane/protocol/netlink"
 
-	bgpapi "github.com/osrg/gobgp/api"
 	bgpconfig "github.com/osrg/gobgp/config"
-	"github.com/osrg/gobgp/packet/bgp"
-	bgpserver "github.com/osrg/gobgp/server"
 )
 
 type Dataplaner interface {
@@ -157,22 +157,11 @@ func main() {
 	go config.ReadConfigfileServe(opts.ConfigFile, opts.ConfigType, configCh, bgpConfigCh, reloadCh)
 	reloadCh <- true
 
-	var bgpServer *bgpserver.BgpServer
-	if !opts.Remote {
-		bgpServer = bgpserver.NewBgpServer()
-		go bgpServer.Serve()
-		grpcServer := bgpapi.NewGrpcServer(bgpServer, opts.GrpcHost)
-		go func() {
-			if err := grpcServer.Serve(); err != nil {
-				log.Fatalf("failed to listen grpc port: %s", err)
-			}
-		}()
-	}
+	bgpProtocol := p.NewGoBGPProtocol()
+	dataplane := NewDataplane()
+	dataplane.AddProtocol(bgpProtocol)
 
-	var dataplane Dataplaner
 	var d *config.Dataplane
-	var c *bgpconfig.BgpConfigSet
-	var fsAgent *iptables.FlowspecAgent
 	for {
 		select {
 		case newConfig := <-bgpConfigCh:
@@ -180,104 +169,32 @@ func main() {
 				log.Warn("running in BGP remote mode. you can't configure BGP daemon via configuration file now")
 				continue
 			}
-
-			var added, deleted, updated []bgpconfig.Neighbor
-			var updatePolicy bool
-
-			if c == nil {
-				c = newConfig
-				if err := bgpServer.Start(&newConfig.Global); err != nil {
-					log.Fatalf("failed to set global config: %s", err)
-				}
-				if newConfig.Zebra.Config.Enabled {
-					if err := bgpServer.StartZebraClient(&newConfig.Zebra.Config); err != nil {
-						log.Fatalf("failed to set zebra config: %s", err)
-					}
-				}
-				if len(newConfig.Collector.Config.Url) > 0 {
-					if err := bgpServer.StartCollector(&newConfig.Collector.Config); err != nil {
-						log.Fatalf("failed to set collector config: %s", err)
-					}
-				}
-				for _, c := range newConfig.RpkiServers {
-					if err := bgpServer.AddRpki(&c.Config); err != nil {
-						log.Fatalf("failed to set rpki config: %s", err)
-					}
-				}
-				for _, c := range newConfig.BmpServers {
-					if err := bgpServer.AddBmp(&c.Config); err != nil {
-						log.Fatalf("failed to set bmp config: %s", err)
-					}
-				}
-				for _, c := range newConfig.MrtDump {
-					if len(c.Config.FileName) == 0 {
-						continue
-					}
-					if err := bgpServer.EnableMrt(&c.Config); err != nil {
-						log.Fatalf("failed to set mrt config: %s", err)
-					}
-				}
-				p := bgpconfig.ConfigSetToRoutingPolicy(newConfig)
-				if err := bgpServer.UpdatePolicy(*p); err != nil {
-					log.Fatalf("failed to set routing policy: %s", err)
-				}
-
-				added = newConfig.Neighbors
-				if opts.GracefulRestart {
-					for i, n := range added {
-						if n.GracefulRestart.Config.Enabled {
-							added[i].GracefulRestart.State.LocalRestarting = true
-						}
-					}
-				}
-
-			} else {
-				added, deleted, updated, updatePolicy = bgpconfig.UpdateConfig(c, newConfig)
-				if updatePolicy {
-					log.Info("Policy config is updated")
-					p := bgpconfig.ConfigSetToRoutingPolicy(newConfig)
-					bgpServer.UpdatePolicy(*p)
-				}
-				c = newConfig
+			if err := bgpProtocol.UpdateConfig(newConfig); err != nil {
+				log.Fatalf("failed to update BGP config: %s", err)
 			}
-
-			for i, p := range added {
-				log.Infof("Peer %v is added", p.Config.NeighborAddress)
-				bgpServer.AddNeighbor(&added[i])
-			}
-			for i, p := range deleted {
-				log.Infof("Peer %v is deleted", p.Config.NeighborAddress)
-				bgpServer.DeleteNeighbor(&deleted[i])
-			}
-			for i, p := range updated {
-				log.Infof("Peer %v is updated", p.Config.NeighborAddress)
-				u, _ := bgpServer.UpdateNeighbor(&updated[i])
-				updatePolicy = updatePolicy || u
-			}
-
-			if updatePolicy {
-				bgpServer.SoftResetIn("", bgp.RouteFamily(0))
-			}
-
 		case newConfig := <-configCh:
-			if dataplane == nil {
+			if d == nil {
 				switch newConfig.Dataplane.Type {
 				case "netlink":
 					log.Debug("new dataplane: netlink")
-					dataplane = netlink.NewDataplane(newConfig, opts.GrpcHost)
-					go func() {
-						err := dataplane.Serve()
-						if err != nil {
-							log.Errorf("dataplane finished with err: %s", err)
-						}
-					}()
+					dataplane.AddProtocol(netlink.NewNetlinkProtocol())
 				default:
 					log.Errorf("Invalid dataplane type(%s). dataplane engine can't be started", newConfig.Dataplane.Type)
 				}
+
+				time.Sleep(time.Millisecond)
+
+				if err := dataplane.SetRouterID(net.ParseIP(newConfig.RouterID)); err != nil {
+					log.Fatal(err)
+				}
+
+				if newConfig.Iptables.Enabled {
+					dataplane.AddProtocol(iptables.NewIPTablesProtocol(newConfig.Iptables))
+				}
 			}
+			d = &newConfig.Dataplane
 
 			as, ds := config.UpdateConfig(d, newConfig.Dataplane)
-			d = &newConfig.Dataplane
 
 			for _, v := range as {
 				log.Infof("VirtualNetwork %s is added", v.RD)
@@ -286,16 +203,6 @@ func main() {
 			for _, v := range ds {
 				log.Infof("VirtualNetwork %s is deleted", v.RD)
 				dataplane.DeleteVirtualNetwork(v)
-			}
-
-			if fsAgent == nil && newConfig.Iptables.Enabled {
-				fsAgent = iptables.NewFlowspecAgent(opts.GrpcHost, newConfig.Iptables)
-				go func() {
-					err := fsAgent.Serve()
-					if err != nil {
-						log.Errorf("flowspec agent finished with err: %s", err)
-					}
-				}()
 			}
 
 		case sig := <-sigCh:

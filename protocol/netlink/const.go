@@ -169,3 +169,7 @@ const (
 	NTF_PROXY  NTF_TYPE = 0x08
 	NTF_ROUTER NTF_TYPE = 0x80
 )
+
+const (
+	RTPROT_GOPLANE = 0x11
+)

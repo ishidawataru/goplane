@@ -234,13 +234,14 @@ class GoPlaneContainer(BGPContainer):
     SHARED_VOLUME = '/root/shared_volume'
 
     def __init__(self, name, asn, router_id, ctn_image_name='osrg/goplane',
-                 log_level='debug', bgp_remote=False):
+                 log_level='debug', bgp_remote=False, iptables=False):
         super(GoPlaneContainer, self).__init__(name, asn, router_id,
                                              ctn_image_name)
         self.shared_volumes.append((self.config_dir, self.SHARED_VOLUME))
         self.vns = []
         self.log_level = log_level
         self.bgp_remote = bgp_remote
+        self.iptables = iptables
 
     def start_goplane(self):
         if self.bgp_remote:
@@ -278,7 +279,9 @@ goplane -f {0}/goplane.conf -l {1} -p > {0}/goplane.log 2>&1
                                                           'sniff-interfaces': info['member'],
                                                           'member-interfaces': info['member']})
 
-        config = {'dataplane': dplane_config}
+        config = {'dataplane': dplane_config, 'router-id': self.router_id}
+        if self.iptables:
+            config['iptables'] = {'enabled': True, 'chain': 'FORWARD'}
 
         if not self.bgp_remote:
             bgp_config = self.create_gobgp_config()
@@ -320,6 +323,8 @@ goplane -f {0}/goplane.conf -l {1} -p > {0}/goplane.log 2>&1
                 ]
                 n = {'config': {'neighbor-interface': info['interface']},
                      'afi-safis': afi_safi_list}
+            if self.iptables:
+                afi_safi_list.append({'config': {'afi-safi-name': 'ipv4-flowspec'}})
 
             if len(info['passwd']) > 0:
                 n['config']['auth-password'] = info['passwd']

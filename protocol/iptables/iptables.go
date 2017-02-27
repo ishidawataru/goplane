@@ -1,4 +1,4 @@
-// Copyright (C) 2016 Nippon Telegraph and Telephone Corporation.
+// Copyright (C) 2017 Nippon Telegraph and Telephone Corporation.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,21 @@ package iptables
 
 import (
 	"fmt"
-	"io"
+	"net"
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/coreos/go-iptables/iptables"
-	"github.com/osrg/gobgp/client"
 	"github.com/osrg/gobgp/packet/bgp"
-	bgptable "github.com/osrg/gobgp/table"
 	"github.com/osrg/goplane/config"
+	proto "github.com/osrg/goplane/protocol"
 )
 
-func FlowSpec2IptablesRule(nlri []bgp.FlowSpecComponentInterface, attr []bgp.PathAttributeInterface) ([]string, error) {
+type ev struct {
+	nlri  bgp.AddrPrefixInterface
+	isDel bool
+}
+
+func FlowSpec2IptablesRule(nlri []bgp.FlowSpecComponentInterface) ([]string, error) {
 	spec := make([]string, 0, len(nlri))
 	m := make(map[bgp.BGPFlowSpecType]bgp.FlowSpecComponentInterface)
 	for _, v := range nlri {
@@ -61,12 +65,24 @@ func FlowSpec2IptablesRule(nlri []bgp.FlowSpecComponentInterface, attr []bgp.Pat
 	return spec, nil
 }
 
-type FlowspecAgent struct {
-	config   config.Iptables
-	grpcHost string
+type IPTablesProtocol struct {
+	config config.Iptables
+	ch     chan *ev
+	list   []*bgp.FlowSpecNLRI
 }
 
-func (a *FlowspecAgent) Serve() error {
+func NewIPTablesProtocol(c config.Iptables) *IPTablesProtocol {
+	p := &IPTablesProtocol{
+		config: c,
+		ch:     make(chan *ev),
+		list:   make([]*bgp.FlowSpecNLRI, 0),
+	}
+	go p.serve()
+	return p
+}
+
+func (p *IPTablesProtocol) serve() error {
+
 	ipt, err := iptables.New()
 	if err != nil {
 		log.Fatalf("%s", err)
@@ -74,8 +90,8 @@ func (a *FlowspecAgent) Serve() error {
 
 	table := "filter"
 	chain := "FLOWSPEC"
-	if a.config.Chain != "" {
-		chain = a.config.Chain
+	if p.config.Chain != "" {
+		chain = p.config.Chain
 	}
 
 	if err := ipt.ClearChain(table, chain); err != nil {
@@ -83,38 +99,15 @@ func (a *FlowspecAgent) Serve() error {
 	}
 	log.Infof("cleared iptables chain: %s, table: %s", chain, table)
 
-	ch := make(chan *bgptable.Path, 16)
-
-	go func() {
-		client, err := client.New(a.grpcHost)
-		if err != nil {
-			log.Fatalf("%s", err)
+	for ev := range p.ch {
+		f := bgp.AfiSafiToRouteFamily(ev.nlri.AFI(), ev.nlri.SAFI())
+		if f != bgp.RF_FS_IPv4_UC {
+			continue
 		}
 
-		watcher, err := client.MonitorRIB(bgp.RF_FS_IPv4_UC, true)
-		if err != nil {
-			log.Fatalf("%s", err)
-		}
+		nlri := &ev.nlri.(*bgp.FlowSpecIPv4Unicast).FlowSpecNLRI
 
-		for {
-			d, err := watcher.Recv()
-			if err == io.EOF {
-				break
-			} else if err != nil {
-				log.Fatalf("%s", err)
-			}
-			for _, p := range d.GetAllKnownPathList() {
-				ch <- p
-			}
-		}
-	}()
-
-	list := make([]*bgp.FlowSpecNLRI, 0, 16)
-
-	for p := range ch {
-		nlri := &p.GetNlri().(*bgp.FlowSpecIPv4Unicast).FlowSpecNLRI
-
-		spec, err := FlowSpec2IptablesRule(nlri.Value, p.GetPathAttrs())
+		spec, err := FlowSpec2IptablesRule(nlri.Value)
 		if err != nil {
 			log.Warnf("failed to convert flowspec spec to iptables rule: %s", err)
 			continue
@@ -122,9 +115,9 @@ func (a *FlowspecAgent) Serve() error {
 
 		idx := 0
 		var q *bgp.FlowSpecNLRI
-		if p.IsWithdraw {
+		if ev.isDel {
 			found := false
-			for idx, q = range list {
+			for idx, q = range p.list {
 				result, err := bgp.CompareFlowSpecNLRI(nlri, q)
 				if err != nil {
 					log.Fatalf("%s", err)
@@ -137,7 +130,7 @@ func (a *FlowspecAgent) Serve() error {
 			if !found {
 				log.Warnf("not found: %s", nlri)
 			}
-			list = append(list[:idx], list[idx+1:]...)
+			p.list = append(p.list[:idx], p.list[idx+1:]...)
 			if err := ipt.Delete(table, chain, spec...); err != nil {
 				log.Errorf("failed to delete: %s", err)
 			} else {
@@ -145,14 +138,14 @@ func (a *FlowspecAgent) Serve() error {
 			}
 		} else {
 			found := false
-			for idx, q = range list {
+			for idx, q = range p.list {
 				result, err := bgp.CompareFlowSpecNLRI(nlri, q)
 				if err != nil {
 					log.Fatalf("%s", err)
 				}
 				if result > 0 {
 					found = true
-					list = append(list[:idx], append([]*bgp.FlowSpecNLRI{nlri}, list[idx:]...)...)
+					p.list = append(p.list[:idx], append([]*bgp.FlowSpecNLRI{nlri}, p.list[idx:]...)...)
 					idx += 1
 					break
 				} else if result == 0 {
@@ -162,8 +155,8 @@ func (a *FlowspecAgent) Serve() error {
 			}
 
 			if !found {
-				list = append(list, nlri)
-				idx = len(list)
+				p.list = append(p.list, nlri)
+				idx = len(p.list)
 			}
 
 			if y, _ := ipt.Exists(table, chain, spec...); y {
@@ -178,9 +171,43 @@ func (a *FlowspecAgent) Serve() error {
 	return nil
 }
 
-func NewFlowspecAgent(grpcHost string, c config.Iptables) *FlowspecAgent {
-	return &FlowspecAgent{
-		config:   c,
-		grpcHost: grpcHost,
+func (p *IPTablesProtocol) AddEntry(e proto.Entry) error {
+	if e.Match().Type() != proto.MATCH_ACL {
+		return nil
 	}
+	p.ch <- &ev{
+		nlri: e.(*proto.GoBGPEntry).NLRI(),
+	}
+	return nil
+}
+
+func (p *IPTablesProtocol) DeleteEntry(e proto.Entry) error {
+	if e.Match().Type() != proto.MATCH_ACL {
+		return nil
+	}
+	p.ch <- &ev{
+		nlri:  e.(*proto.GoBGPEntry).NLRI(),
+		isDel: true,
+	}
+	return nil
+}
+
+func (p *IPTablesProtocol) WatchEntry() (proto.EntryWatcher, error) {
+	return nil, nil
+}
+
+func (p *IPTablesProtocol) SetRouterID(net.IP) error {
+	return nil
+}
+
+func (p *IPTablesProtocol) AddVirtualNetwork(string, config.VirtualNetwork) error {
+	return nil
+}
+
+func (p *IPTablesProtocol) DeleteVirtualNetwork(config.VirtualNetwork) error {
+	return nil
+}
+
+func (p *IPTablesProtocol) Type() proto.ProtocolType {
+	return proto.PROTO_IPTABLES
 }

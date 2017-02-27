@@ -40,6 +40,7 @@ type Iptables struct {
 }
 
 type Config struct {
+	RouterID  string                 `mapstructure:"router-id"`
 	Dataplane Dataplane              `mapstructure:"dataplane"`
 	Iptables  Iptables               `mapstructure:"iptables"`
 	BGP       bgpconfig.BgpConfigSet `mapstructure:"bgp"`

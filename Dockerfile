@@ -5,6 +5,7 @@ FROM osrg/gobgp
 
 MAINTAINER ISHIDA Wataru <ishida.wataru@lab.ntt.co.jp>
 
+RUN apt-get install -qy iptables
 ENV GO15VENDOREXPERIMENT 1
 RUN curl https://glide.sh/get | sh
 ADD . $GOPATH/src/github.com/osrg/goplane/
